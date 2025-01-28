@@ -1,0 +1,1226 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "blog",
+    "model": "foldersluzbe"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "blog",
+    "model": "sluzbapost"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "blog",
+    "model": "folder"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "blog",
+    "model": "pojanjapost"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "searches",
+    "model": "searchquery"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "biblija",
+    "model": "starizavetknjige"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "biblija",
+    "model": "starizavetglave"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "biblija",
+    "model": "starizavettext"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "biblija",
+    "model": "novizavetknjige"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "biblija",
+    "model": "novizavetglave"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "biblija",
+    "model": "novizavettext"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "knjige",
+    "model": "knjiga"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "pojanice",
+    "model": "pojanica"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "pojanice",
+    "model": "listapojanja"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "pojanice",
+    "model": "pojanje"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "pojanice",
+    "model": "starapojanicafolder"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "pojanice",
+    "model": "starapojanica"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "mape",
+    "model": "mesto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add folder sluzbe",
+    "content_type": [
+      "blog",
+      "foldersluzbe"
+    ],
+    "codename": "add_foldersluzbe"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change folder sluzbe",
+    "content_type": [
+      "blog",
+      "foldersluzbe"
+    ],
+    "codename": "change_foldersluzbe"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete folder sluzbe",
+    "content_type": [
+      "blog",
+      "foldersluzbe"
+    ],
+    "codename": "delete_foldersluzbe"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view folder sluzbe",
+    "content_type": [
+      "blog",
+      "foldersluzbe"
+    ],
+    "codename": "view_foldersluzbe"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add sluzba post",
+    "content_type": [
+      "blog",
+      "sluzbapost"
+    ],
+    "codename": "add_sluzbapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change sluzba post",
+    "content_type": [
+      "blog",
+      "sluzbapost"
+    ],
+    "codename": "change_sluzbapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete sluzba post",
+    "content_type": [
+      "blog",
+      "sluzbapost"
+    ],
+    "codename": "delete_sluzbapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view sluzba post",
+    "content_type": [
+      "blog",
+      "sluzbapost"
+    ],
+    "codename": "view_sluzbapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add folder",
+    "content_type": [
+      "blog",
+      "folder"
+    ],
+    "codename": "add_folder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change folder",
+    "content_type": [
+      "blog",
+      "folder"
+    ],
+    "codename": "change_folder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete folder",
+    "content_type": [
+      "blog",
+      "folder"
+    ],
+    "codename": "delete_folder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view folder",
+    "content_type": [
+      "blog",
+      "folder"
+    ],
+    "codename": "view_folder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add pojanja post",
+    "content_type": [
+      "blog",
+      "pojanjapost"
+    ],
+    "codename": "add_pojanjapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change pojanja post",
+    "content_type": [
+      "blog",
+      "pojanjapost"
+    ],
+    "codename": "change_pojanjapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete pojanja post",
+    "content_type": [
+      "blog",
+      "pojanjapost"
+    ],
+    "codename": "delete_pojanjapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view pojanja post",
+    "content_type": [
+      "blog",
+      "pojanjapost"
+    ],
+    "codename": "view_pojanjapost"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add search query",
+    "content_type": [
+      "searches",
+      "searchquery"
+    ],
+    "codename": "add_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change search query",
+    "content_type": [
+      "searches",
+      "searchquery"
+    ],
+    "codename": "change_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete search query",
+    "content_type": [
+      "searches",
+      "searchquery"
+    ],
+    "codename": "delete_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view search query",
+    "content_type": [
+      "searches",
+      "searchquery"
+    ],
+    "codename": "view_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add stari zavet knjige",
+    "content_type": [
+      "biblija",
+      "starizavetknjige"
+    ],
+    "codename": "add_starizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change stari zavet knjige",
+    "content_type": [
+      "biblija",
+      "starizavetknjige"
+    ],
+    "codename": "change_starizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete stari zavet knjige",
+    "content_type": [
+      "biblija",
+      "starizavetknjige"
+    ],
+    "codename": "delete_starizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view stari zavet knjige",
+    "content_type": [
+      "biblija",
+      "starizavetknjige"
+    ],
+    "codename": "view_starizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add stari zavet glave",
+    "content_type": [
+      "biblija",
+      "starizavetglave"
+    ],
+    "codename": "add_starizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change stari zavet glave",
+    "content_type": [
+      "biblija",
+      "starizavetglave"
+    ],
+    "codename": "change_starizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete stari zavet glave",
+    "content_type": [
+      "biblija",
+      "starizavetglave"
+    ],
+    "codename": "delete_starizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view stari zavet glave",
+    "content_type": [
+      "biblija",
+      "starizavetglave"
+    ],
+    "codename": "view_starizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add stari zavet text",
+    "content_type": [
+      "biblija",
+      "starizavettext"
+    ],
+    "codename": "add_starizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change stari zavet text",
+    "content_type": [
+      "biblija",
+      "starizavettext"
+    ],
+    "codename": "change_starizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete stari zavet text",
+    "content_type": [
+      "biblija",
+      "starizavettext"
+    ],
+    "codename": "delete_starizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view stari zavet text",
+    "content_type": [
+      "biblija",
+      "starizavettext"
+    ],
+    "codename": "view_starizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add novi zavet knjige",
+    "content_type": [
+      "biblija",
+      "novizavetknjige"
+    ],
+    "codename": "add_novizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change novi zavet knjige",
+    "content_type": [
+      "biblija",
+      "novizavetknjige"
+    ],
+    "codename": "change_novizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete novi zavet knjige",
+    "content_type": [
+      "biblija",
+      "novizavetknjige"
+    ],
+    "codename": "delete_novizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view novi zavet knjige",
+    "content_type": [
+      "biblija",
+      "novizavetknjige"
+    ],
+    "codename": "view_novizavetknjige"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add novi zavet glave",
+    "content_type": [
+      "biblija",
+      "novizavetglave"
+    ],
+    "codename": "add_novizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change novi zavet glave",
+    "content_type": [
+      "biblija",
+      "novizavetglave"
+    ],
+    "codename": "change_novizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete novi zavet glave",
+    "content_type": [
+      "biblija",
+      "novizavetglave"
+    ],
+    "codename": "delete_novizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view novi zavet glave",
+    "content_type": [
+      "biblija",
+      "novizavetglave"
+    ],
+    "codename": "view_novizavetglave"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add novi zavet text",
+    "content_type": [
+      "biblija",
+      "novizavettext"
+    ],
+    "codename": "add_novizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change novi zavet text",
+    "content_type": [
+      "biblija",
+      "novizavettext"
+    ],
+    "codename": "change_novizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete novi zavet text",
+    "content_type": [
+      "biblija",
+      "novizavettext"
+    ],
+    "codename": "delete_novizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view novi zavet text",
+    "content_type": [
+      "biblija",
+      "novizavettext"
+    ],
+    "codename": "view_novizavettext"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add knjiga",
+    "content_type": [
+      "knjige",
+      "knjiga"
+    ],
+    "codename": "add_knjiga"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change knjiga",
+    "content_type": [
+      "knjige",
+      "knjiga"
+    ],
+    "codename": "change_knjiga"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete knjiga",
+    "content_type": [
+      "knjige",
+      "knjiga"
+    ],
+    "codename": "delete_knjiga"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view knjiga",
+    "content_type": [
+      "knjige",
+      "knjiga"
+    ],
+    "codename": "view_knjiga"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add pojanica",
+    "content_type": [
+      "pojanice",
+      "pojanica"
+    ],
+    "codename": "add_pojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change pojanica",
+    "content_type": [
+      "pojanice",
+      "pojanica"
+    ],
+    "codename": "change_pojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete pojanica",
+    "content_type": [
+      "pojanice",
+      "pojanica"
+    ],
+    "codename": "delete_pojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view pojanica",
+    "content_type": [
+      "pojanice",
+      "pojanica"
+    ],
+    "codename": "view_pojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add lista pojanja",
+    "content_type": [
+      "pojanice",
+      "listapojanja"
+    ],
+    "codename": "add_listapojanja"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change lista pojanja",
+    "content_type": [
+      "pojanice",
+      "listapojanja"
+    ],
+    "codename": "change_listapojanja"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete lista pojanja",
+    "content_type": [
+      "pojanice",
+      "listapojanja"
+    ],
+    "codename": "delete_listapojanja"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view lista pojanja",
+    "content_type": [
+      "pojanice",
+      "listapojanja"
+    ],
+    "codename": "view_listapojanja"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add pojanje",
+    "content_type": [
+      "pojanice",
+      "pojanje"
+    ],
+    "codename": "add_pojanje"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change pojanje",
+    "content_type": [
+      "pojanice",
+      "pojanje"
+    ],
+    "codename": "change_pojanje"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete pojanje",
+    "content_type": [
+      "pojanice",
+      "pojanje"
+    ],
+    "codename": "delete_pojanje"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view pojanje",
+    "content_type": [
+      "pojanice",
+      "pojanje"
+    ],
+    "codename": "view_pojanje"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add stara pojanica folder",
+    "content_type": [
+      "pojanice",
+      "starapojanicafolder"
+    ],
+    "codename": "add_starapojanicafolder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change stara pojanica folder",
+    "content_type": [
+      "pojanice",
+      "starapojanicafolder"
+    ],
+    "codename": "change_starapojanicafolder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete stara pojanica folder",
+    "content_type": [
+      "pojanice",
+      "starapojanicafolder"
+    ],
+    "codename": "delete_starapojanicafolder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view stara pojanica folder",
+    "content_type": [
+      "pojanice",
+      "starapojanicafolder"
+    ],
+    "codename": "view_starapojanicafolder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add stara pojanica",
+    "content_type": [
+      "pojanice",
+      "starapojanica"
+    ],
+    "codename": "add_starapojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change stara pojanica",
+    "content_type": [
+      "pojanice",
+      "starapojanica"
+    ],
+    "codename": "change_starapojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete stara pojanica",
+    "content_type": [
+      "pojanice",
+      "starapojanica"
+    ],
+    "codename": "delete_starapojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view stara pojanica",
+    "content_type": [
+      "pojanice",
+      "starapojanica"
+    ],
+    "codename": "view_starapojanica"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add mesto",
+    "content_type": [
+      "mape",
+      "mesto"
+    ],
+    "codename": "add_mesto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change mesto",
+    "content_type": [
+      "mape",
+      "mesto"
+    ],
+    "codename": "change_mesto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete mesto",
+    "content_type": [
+      "mape",
+      "mesto"
+    ],
+    "codename": "delete_mesto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view mesto",
+    "content_type": [
+      "mape",
+      "mesto"
+    ],
+    "codename": "view_mesto"
+  }
+}
+]

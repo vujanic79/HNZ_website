@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}{{ pojanica.name }} - {{ pojanica.godina_izdanja }}{% endblock %}
+
+{% block content %}
+<div class="container p-3">
+    <div class="row">
+        <div class="col-12">
+            <div class="card p-3">
+                <div class="card-body text-center">
+                    <h4 class="card-title">{{ pojanica.name }} - {{ pojanica.godina_izdanja }} - {{ pojanica.izdanje }} {{ pojanica.jezik }} izdanje</h4>
+                    <br>
+                    <!-- Scrollable PDF Container for Two-Page View -->
+                    <div id="pdf-scroll-container" class="book-container overflow-auto" style="height: 80vh; border: 1px solid #ddd; white-space: nowrap;">
+                        <div id="pdf-container" class="d-flex align-items-center" style="min-width: max-content;"></div>
+                    </div>
+
+                    <!-- Back Button Aligned to the Right Side -->
+                    <div class="mt-4 text-end">
+                        <div class="mt-3 text-center">
+                            <button id="zoom-in" class="btn btn-secondary btn-sm" style="width: 40px; height: 40px;">+</button>
+                            <button id="zoom-out" class="btn btn-secondary btn-sm" style="width: 40px; height: 40px;">-</button>
+                        </div>
+                        <a href="{% url 'stare_pojanice_list' %}" class="btn btn-primary">
+                            <i class="bi bi-arrow-left"></i> Nazad
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PDF.js Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const pdfUrl = "{{ pdf_file }}";  // Use the context variable for the PDF file URL
+        let pdfDoc = null;
+        let scale = 0.8;  // Initial scale factor for rendering
+        const container = document.getElementById('pdf-container');
+
+        // Load the PDF document
+        pdfjsLib.getDocument(pdfUrl).promise.then(doc => {
+            pdfDoc = doc;
+            renderAllPagesInPairs();
+        });
+
+        // Render all pages in pairs for a two-page view
+        function renderAllPagesInPairs() {
+            container.innerHTML = ''; // Clear existing content
+            for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum += 2) {
+                renderPagePair(pageNum, pageNum + 1);
+            }
+        }
+
+        // Render two pages side-by-side
+        function renderPagePair(leftPageNum, rightPageNum) {
+            // Container for two-page spread
+            const pairContainer = document.createElement('div');
+            pairContainer.classList.add('d-inline-flex', 'mb-4');
+            pairContainer.style.marginRight = "20px";  // Space between page pairs
+
+            // Render the left page
+            renderPage(leftPageNum, pairContainer);
+
+            // Render the right page, if it exists
+            if (rightPageNum <= pdfDoc.numPages) {
+                renderPage(rightPageNum, pairContainer);
+            }
+
+            // Append the pair container to the main horizontal container
+            container.appendChild(pairContainer);
+        }
+
+        // Render a single page into a given container
+        function renderPage(num, parentContainer) {
+            pdfDoc.getPage(num).then(page => {
+                // Set up the canvas for rendering the page
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const viewport = page.getViewport({ scale });
+
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                canvas.style.border = '1px solid #ccc';
+                canvas.style.maxWidth = '100%';  // Ensure it fits within the container
+
+                // Render the page into the canvas context
+                page.render({
+                    canvasContext: ctx,
+                    viewport: viewport
+                }).promise.then(() => {
+                    // Append the rendered canvas to the parent container
+                    parentContainer.appendChild(canvas);
+                });
+            });
+        }
+
+        // Zoom In and Zoom Out Buttons
+        document.getElementById('zoom-in').addEventListener('click', () => {
+            scale += 0.1;  // Increase scale by 0.1
+            renderAllPagesInPairs();  // Re-render with new scale
+        });
+
+        document.getElementById('zoom-out').addEventListener('click', () => {
+            if (scale > 0.2) {  // Minimum scale limit to avoid zero or negative values
+                scale -= 0.1;  // Decrease scale by 0.1
+                renderAllPagesInPairs();  // Re-render with new scale
+            }
+        });
+    });
+</script>
+{% endblock %}

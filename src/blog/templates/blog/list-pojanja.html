@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{% block title %}Pojanja{% endblock %}
+
+{% block content%}
+
+<div class= "row pt-4"> 
+	{% for object in object_list %}
+		{% include 'blog/list-inline-pojanja.html' with pojanje=object truncate=True detail=False %}
+	{% endfor %}
+</div>
+
+<div class="d-flex justify-content-end mt-4 p-5">
+    <a href="{% url 'folder_list' %}" class="btn btn-primary">Nazad</a>
+</div>
+<script>
+    // Collect all .song into a NodeList then convert it into a real array
+    const songs = [...document.querySelectorAll('.song')];
+
+    // Bind the timeupdate event to each .song
+    songs.forEach(song => song.ontimeupdate = nextSong);
+    
+    // Event handler
+    function nextSong(e) {
+
+      // Get player's full duration in seconds
+      const end = this.duration;
+
+      // Get the current time spent playing in seconds
+      let now = this.currentTime;
+
+      // If the time playing reaches the duration...
+      if (end <= now) {
+        
+        // Get the index position of player
+        const position = songs.indexOf(this);
+
+        // If the player is the last one start play on the first player
+        if (position === songs.length - 1) {
+          songs[0].play();
+
+        // Otherwise start ply on the next player
+        } else {
+          songs[position + 1].play();
+        }
+      }
+    }
+  </script>
+{% endblock %}

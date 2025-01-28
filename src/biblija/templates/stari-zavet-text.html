@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% block title %}{{ knjiga.name }} - glava {{glava.name}}{% endblock %}
+
+
+{% block content %}
+<div class="container p-2">
+    <div class="row pt-4">
+        <div class="col-12">
+            <div class="card p-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ knjiga.name }} - glava {{glava.name}}</h5>
+                    <p class="card-text">
+                        {% for t in text %}
+                            {{ t.content|safe }} <!-- Ensure HTML tags are rendered correctly -->
+                        {% endfor %}
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-4 p-2">
+                        <!-- Buttons container for proper alignment -->
+                        <div class="d-flex">
+                            <!-- Button to play audio (left side) -->
+                            <button class="btn btn-primary me-2" onclick="playAudio()">
+                                <i class="bi bi-play-circle"></i> Pusti
+                            </button>
+                            <!-- Button for other action (middle) -->
+                           	<button class="btn btn-primary me-2" onclick="redirectToSearch()">
+                                <i class="bi bi-briefcase"></i> Službe
+                            </button>
+                        </div>
+                        <!-- Button to go back (right side) -->
+                        <a href="{% url 'stari_zavet_list_view' knjiga.slug %}" class="btn btn-primary">
+                            <i class="bi bi-arrow-right"></i> Nazad
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if text.first.audio %}
+<audio id="audio" src="{{ text.first.audio.url }}" preload="auto"></audio>
+{% endif %}
+<script>
+	flag = true;
+    function playAudio() {
+        const player = document.getElementById('audio');
+        if (player && flag) {
+            player.play();
+            flag = false;
+        }
+        else{
+            player.pause();
+            flag= true;
+        }
+    }
+
+    function redirectToSearch() {
+    	const knjigaName = "{{ knjiga.name }}".trim();
+    	const glavaName = "{{ glava.name }}".trim();
+    	if (glavaName.endsWith('.')) {
+        	glavaName2 = glavaName.slice(0, -1);
+    	}
+    	
+    	// Replace spaces with '+' instead of '%20'
+    	const formattedQuery = (knjigaName + ' ' + glavaName2).replace(/\s+/g, '+');
+    	window.location.href = `/search/?q=${formattedQuery}`;
+    }
+</script>
+{% endblock %}

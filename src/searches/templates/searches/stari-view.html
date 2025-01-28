@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Pretraga{% endblock %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 w-60 p-5">
+        {% if verses_with_query %}
+            {% for verse in verses_with_query %}
+                <!-- Wrap card in an <a> tag to link to the corresponding text view -->
+                <a href="{% url 'stari_zavet_text_view' verse.knjiga_slug verse.glava_slug %}" class="text-decoration-none" style="color: inherit;">
+                    <div class="card mb-3 mx-auto" style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{ verse.knjiga_name }} - Glava {{ verse.glava_number }}
+                            </h5>
+                            <p class="card-text">
+                                {{ verse.verse_content|safe }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <p>Nije pronađen nijedan rezultat za "{{ query }}".</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+<div class="col-12 col-md-8 mb-3 mx-auto p-2">
+	<div class="card {% if not sluzba_post.publish_date %} bg-dark text-light {%endif%} p-1">
+		<div class="card-body">
+			<h5 class="card-title">{{ sluzba_post.title }} - {{ sluzba_post.glava }}</h5>
+				<div class="pb-1">
+					Tema: {% if sluzba_post.tema %} {{ sluzba_post.tema }} {% else %} / {% endif %}
+				</div>
+				<div class="pb-2">
+					Datum: {{ sluzba_post.publish_date }}
+				</div>
+				{% if sluzba_post.audio %}
+					<audio controls class="w-100">
+						<source src="{{ sluzba_post.audio.url }}" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+				{% endif %}	
+		</div>
+	</div>
+</div>

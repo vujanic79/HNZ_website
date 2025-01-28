@@ -1,0 +1,21 @@
+<div class="col-12 col-md-8 mb-3 mx-auto p-2">
+	<div class="card p-3">
+		<div cass="card-body ">
+			<h5 class="card-title">{{knjiga.title}} </h5>
+			<p class="card-text">
+				{% if truncate %}
+					{{knjiga.opis|truncatewords:50}}
+				{% else %}
+					{{knjiga.opis}}
+				{% endif %}
+			</p>
+			{% if not detail %}
+				{% if user.is_authenticated %}
+				<div class="d-flex justify-content-end">
+					<a href="{{knjiga.get_absolute_url}}" class="btn btn-primary">Više</a>
+				</div>
+				{% endif %}
+			{% endif %}
+		</div>
+	</div>
+</div>

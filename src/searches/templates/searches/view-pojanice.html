@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title %}Pretraga{% endblock %}
+
+
+{% block content%}
+<div class="container p-5">
+    <div class="row">
+        {% for pojanje in pojanice_list %}
+            <div class="col-md-2 mb-4">
+                <div class="card h-100 d-flex flex-column">
+                    <div class="card-body d-flex flex-column flex-grow-1 p-2">
+                        <a href="{% url 'pojanja_text_view' pojanje.pojanje.folder.slug pojanje.broj %}" class="text-decoration-none text-black">
+                            <h5 class="card-title text-center">{{pojanje.skracenica}}  {{ pojanje.broj }} - {{pojanje.title}}</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:6 %}
+                </div><div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

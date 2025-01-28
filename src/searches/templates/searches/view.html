@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{% block title %}Pretraga{% endblock %}
+{%block content%}
+
+<div class="row">
+	<div class="col-12 col-8 mx-auto">
+		{%for sluzba_item in sluzba_list%}
+			{% include 'blog/list-inline.html' with sluzba_post=sluzba_item truncate=True detail=False %}
+		{%endfor%}
+	</div>
+</div>
+
+{%endblock%}

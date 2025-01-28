@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Službe{% endblock %}
+
+{% block content%}
+
+
+<div class="row pt-4">
+	<div class="col-12 col-8 mx-auto">
+		{%for sluzba_item in sluzba_list%}
+			{% include 'blog/list-inline.html' with sluzba_post=sluzba_item truncate=True detail=False %}
+		{%endfor%}
+	</div>
+</div>
+
+
+<div class="d-flex justify-content-end mt-4 p-5">
+    <a href="{% url 'folder_list_sluzbe' %}" class="btn btn-primary">Nazad</a>
+</div>
+{% endblock %}

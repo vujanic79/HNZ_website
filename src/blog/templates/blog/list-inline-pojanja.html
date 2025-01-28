@@ -1,0 +1,17 @@
+<div class="col-12 col-md-8 mb-3 mx-auto p-2">
+	<div class="card p-3">
+		<div cass="card-body ">
+			<h5 class="card-title">{{pojanje.title}} </h5>
+				<div class="pb-2">
+					Album:  {{pojanje.album}}
+				</div>
+				{% if pojanje.audio %}
+					<audio controls class="song w-100"> 
+						<source src=" {{pojanje.audio.url}}" type="audio/mpeg">
+							Your browser does not support the audio element.
+					</audio>
+				{%endif%}
+			
+		</div>
+	</div>
+</div>

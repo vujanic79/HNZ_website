@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content%}
+
+<h1>{{ title }}</h1>
+
+
+{% if user.is_authenticated %}
+
+{% for a in blog_list%}
+	{% include 'blog/list-inline.html' with blog_post=a truncate=True detail=False %}
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

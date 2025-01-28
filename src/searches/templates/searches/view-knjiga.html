@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{% block title %}Pretraga{% endblock %}
+{%block content%}
+
+<div class="row">
+    <div class="col-12 col-8 mx-auto">
+        {%for knjige in knjiga_list%}
+            {% include 'list-inline.html' with knjiga=knjige truncate=True detail=False %}
+        {%endfor%}
+    </div>
+</div>
+
+{%endblock%}

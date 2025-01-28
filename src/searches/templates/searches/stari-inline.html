@@ -1,0 +1,14 @@
+<div class="col-12 col-md-8 mb-3 mx-auto p-2">
+	<div class="card p-3">
+		<div class="card-body">
+			<h5 class="card-title">{{ text.title }} - {{ text.glava }}</h5>
+			<p class="card-text">
+				Tema: {% if text.tema %} {{ text.tema }} {% else %} / {% endif %}
+				<br>
+
+				<br>
+				<small class="text-muted">{{ text.publish_date }}</small>
+			</p>
+		</div>
+	</div>
+</div>

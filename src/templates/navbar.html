@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #5cace6;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Arhiva</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/sluzbe">Službe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pojanja">Pojanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/knjige-i-spisi">Knjige i zapisi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mapa-skupstina">Mape</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Biblija
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/stari-zavet">Stari zavet</a>
+            <a class="dropdown-item" href="/novi-zavet">Novi zavet</a>
+           </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pojanice
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/stare-pojanice">Stare pojanice</a>
+            <a class="dropdown-item" href="/nove-pojanice">Nove pojanice</a>
+          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/kontakt">Kontakt</a>
+          </li>
+      </ul>
+       
+      <form class="d-flex" role="search" action='{% if request.path == "/sluzbe/" or request.path == "/search/" %}/search/{% elif request.path == "/search/pojanja/" or request.path == "/pojanja/" %}/search/pojanja/{% elif request.path == "/knjige-i-spisi/" or request.path == "/search/knjige-i-spisi/" %}/search/knjige-i-spisi/{% elif request.path == "/nove-pojanice/" or request.path == "/search/nove-pojanice/" %}/search/nove-pojanice/{% elif request.path == "/stari-zavet/" or request.path == "/search/stari-zavet/"%}/search/stari-zavet/{% elif request.path == "/novi-zavet/" or request.path == "/search/novi-zavet/"%}/search/novi-zavet/{% endif %}'>
+        <input class="form-control me-2" type="search" name='q'  placeholder="Pretraga" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Pretraži</button>
+      </form>
+      <ul class="navbar-nav p-2"> 
+          {% if user.is_authenticated %}
+            <li>
+              <form method="post" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Odjavi se</button>
+              </form>
+            </li>
+          {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Mape{% endblock %}
+
+{% block content %}
+
+<div class="row p-0">
+    <div class="col-12 p-3" style="text-align: center;">
+        <h3>Mapa skupština u Srbiji</h3>
+    </div>
+    
+    <!-- Full-Screen Map Container with Margins -->
+    <div class="col-12 p-0">
+        <div class="h-100 w-100" style="position: fixed;">
+            {{ mapa|safe }}  <!-- Render the map and ensure it fills the space -->
+        </div>
+    </div>
+</div>
+{% endblock %}
